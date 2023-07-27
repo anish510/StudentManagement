@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Api</title>
+</head>
+<body>
+    <h1>Api Data</h1>
+    {%if data.error%}
+        <p>{{data.error}}</p>
+    {%else%}
+        <br>
+            {%for items in data%}
+                   <li> Name: {{items.name}}</li>
+                   <li>  Roll: {{items.roll}}</li>
+                   <li>  City: {{items.city}}</li>
+                   <li>  DOB: {{items.dob}}</li>
+                   <li>  Phone_number: {{items.phone_number}}</li>
+                 <br>
+                </ul>
+            {%endfor%}
+        </ul>
+    {%endif%}   
+</body>
+</html>
