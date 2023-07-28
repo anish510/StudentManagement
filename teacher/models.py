@@ -19,8 +19,8 @@ class Teacher(models.Model):
     position = models.CharField(max_length=100)
     dob = models.DateField(default= date.today)
     phone_number = models.CharField(max_length=10)
-    email = models.EmailField()
-    image_url = models.ImageField(null=True)
+    email = models.EmailField(null = True)
+    image_url = models.ImageField(null=True,blank = True)
 
     def __str__(self):
         return self.slug

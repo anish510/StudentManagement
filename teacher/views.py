@@ -37,7 +37,9 @@ def teacherdata(request):
     try: 
         response = requests.get('http://127.0.0.1:8000/teacher/listteacher/')
         data = response.json()
+        print(data)
         data = data['data']
+        print(data)
     except requests.RequestException as e:
             data = {'error':str(e)}
     except ValueError as e:
